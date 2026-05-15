@@ -207,11 +207,13 @@
       height: 100%;
       min-width: 100%;
       min-height: 56.25vw;
-      transform: translate(-50%, -50%);
+      /* scale(1.1) убирает полосы по краям на iPhone */
+      transform: translate(-50%, -50%) scale(1.1); 
       border: none;
       pointer-events: none;
       opacity: 0;
       animation: videoFadeIn 1s ease forwards 2s;
+      object-fit: cover;
     }
     @keyframes videoFadeIn {
       from { opacity: 0; }
